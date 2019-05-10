@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'color-schema';
+  theme = 'Default';
+
+  changeTheme(theme: string) {
+    document.getElementsByTagName('html')[0].setAttribute('data-theme', theme);
+    this.theme = theme;
+  }
 }

@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  /* Color Options */
+  --font-color-light: #000;
+  --font-color-dark: #FFF;
+  --font-color-crazy: #55b19c;
+  --bg-color-light: #FFF;
+  --bg-color-dark: #000;
+  --bg-color-crazy: #7070b9;
+
+  --font-color: var(--font-color-light);
+  --bg-color: var(--bg-color-light);
+
+
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --font-color: var(--font-color-light);
+    --bg-color: var(--bg-color-light);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --font-color: var(--font-color-dark);
+    --bg-color: var(--bg-color-dark);
+  }
+}
+
+[data-theme="light"] {
+  --font-color: var(--font-color-light);
+  --bg-color: var(--bg-color-light);
+}
+
+[data-theme="dark"] {
+  --font-color: var(--font-color-dark);
+  --bg-color: var(--bg-color-dark);
+}
+
+[data-theme="crazy"] {
+  --font-color: var(--font-color-crazy);
+  --bg-color: var(--bg-color-crazy);
+}
+
+
+body {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+
